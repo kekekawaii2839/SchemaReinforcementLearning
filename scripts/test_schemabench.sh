@@ -1,4 +1,4 @@
-MODEL_NAME=llama3_1
+MODEL_NAME=llama3_2_3b
 
 python schemabench/unionbench.py \
     --model $MODEL_NAME \

@@ -1,0 +1,22 @@
+max_retry_times = 3
+
+[[api_keys.gpt-4o-mini]]
+api_key = "sk-xxx"
+model = "gpt-4o-mini"
+base_url = "[set here if needed]"
+
+[[api_keys.llama3_2_3b]]
+api_key = "EMPTY"
+model = "/your/path/to/llama3_2_3b"
+base_url = "http://localhost:{your-vllm-port-here}/v1/"
+
+[request]
+format = "chat" # how to obtain structured data from the model, can be chat, tool_call, or function_call
+json_mode = false # whether to use json mode to send the request
+dynamic_json_fix = true # Trying to fix the errored json if the json_mode is enabled
+default_completions_model = "gpt-4o-mini"
+default_timeout = 90
+default_request_lib = "openai" # which request library to use, currently only support openai
+use_cache = false # whether read the saved completions from the cache, will accelerate the execution with same inputs
+save_completions = false
+save_complections_path = ".cache/completions"

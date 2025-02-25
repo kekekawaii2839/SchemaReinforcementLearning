@@ -69,19 +69,149 @@ We release the [LLaMA-3.2 3B SRL](https://huggingface.co/HaolunLi/LLaMA-3.2-3B-S
 
 ## Performance📈
 We evaluate the performance of several models on the SchemaBench. The results are shown below:
-| Model                   | Complex | Custom | Escape | Overall | GSM8K | MATH500 | MMLU  | ARC-C |
-|-------------------------|---------|--------|--------|---------|-------|---------|-------|-------|
-| GPT-4o                  | 84.47   | 61.56  | 37.14  | 61.06   | 97.80 | 41.40   | 86.16 | 97.01 |
-| GPT-4o-mini             | 68.86   | 46.17  | 16.89  | 43.98   | 86.13 | 31.80   | 49.41 | 77.65 |
-| Qwen-2.5 7B             | 72.42   | 43.60  | 11.11  | 42.38   | 94.54 | 38.60   | 74.43 | 91.21 |
-| MiniCPM-3 4B            | 53.88   | 20.29  | 9.13   | 27.77   | 69.22 | 33.40   | 66.58 | 88.31 |
-| LLaMA-3.1 8B            | 64.26   | 33.07  | 12.02  | 36.45   | 95.91 | 85.60   | 71.83 | 84.98 |
-| LLaMA-3.1 8B SFT        | 74.56   | 46.64  | 60.58  | 60.59   | 89.46 | 63.80   | 66.97 | 84.56 |
-| - w/o Collected JSON    | 70.84   | 42.06  | 60.35  | 57.75   | 78.39 | 46.00   | 58.87 | 75.68 |
-| LLaMA-3.2 3B            | 49.84   | 27.31  | 8.37   | 28.51   | 80.97 | 35.40   | 62.38 | 79.27 |
-| LLaMA-3.2 3B SFT        | 71.71   | 45.52  | 52.21  | 56.48   | 82.94 | 44.40   | 61.50 | 78.41 |
-| - w/o Collected JSON    | 72.42   | 42.83  | 54.82  | 56.69   | 78.85 | 36.20   | 59.11 | 75.68 |
-| LLaMA-3.2 3B SRL        | 82.25   | 66.13  | 69.10  | 72.50   | 84.23 | 43.20   | 57.99 | 78.24 |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th colspan="4">Schema-only Generation</th>
+      <th colspan="4">Schema-constrained Reasoning</th>
+    </tr>
+    <tr>
+      <th>Complex</th>
+      <th>Custom</th>
+      <th>Escape</th>
+      <th>Overall</th>
+      <th>GSM8K</th>
+      <th>MATH500</th>
+      <th>MMLU</th>
+      <th>ARC-C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GPT-4o</td>
+      <td>84.47</td>
+      <td>61.56</td>
+      <td>37.14</td>
+      <td>61.06</td>
+      <td>97.80</td>
+      <td>41.40</td>
+      <td>86.16</td>
+      <td>97.01</td>
+    </tr>
+    <tr>
+      <td>GPT-4o-mini</td>
+      <td>68.86</td>
+      <td>46.17</td>
+      <td>16.89</td>
+      <td>43.98</td>
+      <td>86.13</td>
+      <td>31.80</td>
+      <td>49.41</td>
+      <td>77.65</td>
+    </tr>
+    <tr>
+      <td>Qwen-2.5 7B</td>
+      <td>72.42</td>
+      <td>43.60</td>
+      <td>11.11</td>
+      <td>42.38</td>
+      <td>94.54</td>
+      <td>38.60</td>
+      <td>74.43</td>
+      <td>91.21</td>
+    </tr>
+    <tr>
+      <td>MiniCPM-3 4B</td>
+      <td>53.88</td>
+      <td>20.29</td>
+      <td>9.13</td>
+      <td>27.77</td>
+      <td>69.22</td>
+      <td>33.40</td>
+      <td>66.58</td>
+      <td>88.31</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.1 8B</td>
+      <td>64.26</td>
+      <td>33.07</td>
+      <td>12.02</td>
+      <td>36.45</td>
+      <td>95.91</td>
+      <td>85.60</td>
+      <td>71.83</td>
+      <td>84.98</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.1 8B SFT</td>
+      <td>74.56</td>
+      <td>46.64</td>
+      <td>60.58</td>
+      <td>60.59</td>
+      <td>89.46</td>
+      <td>63.80</td>
+      <td>66.97</td>
+      <td>84.56</td>
+    </tr>
+    <tr>
+      <td>- w/o Collected JSON</td>
+      <td>70.84</td>
+      <td>42.06</td>
+      <td>60.35</td>
+      <td>57.75</td>
+      <td>78.39</td>
+      <td>46.00</td>
+      <td>58.87</td>
+      <td>75.68</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.2 3B</td>
+      <td>49.84</td>
+      <td>27.31</td>
+      <td>8.37</td>
+      <td>28.51</td>
+      <td>80.97</td>
+      <td>35.40</td>
+      <td>62.38</td>
+      <td>79.27</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.2 3B SFT</td>
+      <td>71.71</td>
+      <td>45.52</td>
+      <td>52.21</td>
+      <td>56.48</td>
+      <td>82.94</td>
+      <td>44.40</td>
+      <td>61.50</td>
+      <td>78.41</td>
+    </tr>
+    <tr>
+      <td>- w/o Collected JSON</td>
+      <td>72.42</td>
+      <td>42.83</td>
+      <td>54.82</td>
+      <td>56.69</td>
+      <td>78.85</td>
+      <td>36.20</td>
+      <td>59.11</td>
+      <td>75.68</td>
+    </tr>
+    <tr>
+      <td>LLaMA-3.2 3B SRL</td>
+      <td>82.25</td>
+      <td>66.13</td>
+      <td>69.10</td>
+      <td>72.50</td>
+      <td>84.23</td>
+      <td>43.20</td>
+      <td>57.99</td>
+      <td>78.24</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 ## Training

@@ -5,8 +5,6 @@ export WANDB_API_KEY='your-wandb-api-key'
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export TOKENIZERS_PARALLELISM=true
 
-export FINE_GRAINED_SCHEMA=True
-
 cd train/PRIME/training/
 
 PROJECT_NAME='PRIME'
@@ -69,4 +67,4 @@ python3 -m verl.trainer.main_ppo \
     reward_model.prime_model.optim.lr=1e-6 \
     reward_model.prime_model.optim.grad_clip=10.0 \
     reward_model.prime_model.input_tokenizer=null \
-    trainer.default_local_dir=$CKPT_PATH/$PROJECT_NAME/$EXPERIMENT_NAME \
+    +use_fine_grained=True \

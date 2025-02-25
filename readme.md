@@ -8,6 +8,8 @@
 
 <p align="center">
   <a href="#data">Data</a> •
+  <a href="#model">Model</a> •
+  <a href="#performance">Performance</a> •
   <a href="#training">Training</a> •
   <a href="#evaluation">Evaluation</a> •
   <a href="#paper">Paper</a> •
@@ -17,19 +19,11 @@
 
 </div>
 
-This repo provides all SFT and RL training data, complete training pipeline and evaluation scripts used in Schemabench. The dataset is using schema files crawled from [JSON Schema Store](https://www.schemastore.org/json/) and GitHub, then constructed automatically using fine-tuned LLaMA and [JSON Schema Faker](https://github.com/json-schema-faker/json-schema-faker).
+Welcome to the official repo for SchemaBench, containing the dataset, training scripts and evaluation code in our papar.
 
 ## What's New
 
 - **[2025/02/25]** SchemaBench is now released!
-
-✨Here is an overview of our training pipeline.
-
-<br>
-<div align="center">
-<img src="assets/train.png" width="800px">
-</div>
-<br>
 
 ## Data
 
@@ -70,7 +64,36 @@ The file structure is as follows:
 
 *Please make sure you have downloaded all data files and put them into the right directory.*
 
+## Model🤗
+We release the [LLaMA-3.2 3B SRL](https://huggingface.co/HaolunLi/LLaMA-3.2-3B-SRL) for anyone who wants to use it.
+
+## Performance📈
+We evaluate the performance of several models on the SchemaBench. The results are shown below:
+| Model                   | Complex | Custom | Escape | Overall | GSM8K | MATH500 | MMLU  | ARC-C |
+|-------------------------|---------|--------|--------|---------|-------|---------|-------|-------|
+| GPT-4o                  | 84.47   | 61.56  | 37.14  | 61.06   | 97.80 | 41.40   | 86.16 | 97.01 |
+| GPT-4o-mini             | 68.86   | 46.17  | 16.89  | 43.98   | 86.13 | 31.80   | 49.41 | 77.65 |
+| Qwen-2.5 7B             | 72.42   | 43.60  | 11.11  | 42.38   | 94.54 | 38.60   | 74.43 | 91.21 |
+| MiniCPM-3 4B            | 53.88   | 20.29  | 9.13   | 27.77   | 69.22 | 33.40   | 66.58 | 88.31 |
+| LLaMA-3.1 8B            | 64.26   | 33.07  | 12.02  | 36.45   | 95.91 | 85.60   | 71.83 | 84.98 |
+| LLaMA-3.1 8B SFT        | 74.56   | 46.64  | 60.58  | 60.59   | 89.46 | 63.80   | 66.97 | 84.56 |
+| - w/o Collected JSON    | 70.84   | 42.06  | 60.35  | 57.75   | 78.39 | 46.00   | 58.87 | 75.68 |
+| LLaMA-3.2 3B            | 49.84   | 27.31  | 8.37   | 28.51   | 80.97 | 35.40   | 62.38 | 79.27 |
+| LLaMA-3.2 3B SFT        | 71.71   | 45.52  | 52.21  | 56.48   | 82.94 | 44.40   | 61.50 | 78.41 |
+| - w/o Collected JSON    | 72.42   | 42.83  | 54.82  | 56.69   | 78.85 | 36.20   | 59.11 | 75.68 |
+| LLaMA-3.2 3B SRL        | 82.25   | 66.13  | 69.10  | 72.50   | 84.23 | 43.20   | 57.99 | 78.24 |
+
+
 ## Training
+
+✨Here is an overview of our training pipeline.
+
+<br>
+<div align="center">
+<img src="assets/train.png" width="800px">
+</div>
+<br>
+
 ### Install
 Clone this repository and navigate to the SchemaBench folder.
 ```bash
@@ -113,7 +136,7 @@ Then fill in the `private.toml` with your api key and base url if needed. After 
 bash scripts/test_schemabench.sh
 ```
 
-If you need to run the evaluation on a subset of the SchemaBench, you can modify the `test_category` in `test_schemabench.sh` script. Currently you can choose from `['all', 'schema', 'reasoning']` and single sub-tasks.
+If you need to run the evaluation on a subset of the SchemaBench, you can modify the `test_category` in `test_schemabench.sh` script. Currently you can choose from `['all', 'schema', 'reasoning']` and all single sub-tasks.
 
 ## Paper
 The paper is currently under review. We will update the paper link once it is published.

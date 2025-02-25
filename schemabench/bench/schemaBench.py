@@ -304,7 +304,7 @@ class CustomFormatBench(SchemaBench):
                         'verify_schema': verify,
                     })
         
-        with open('./schemabench/data/limitation_test.jsonl', 'r', encoding='utf-8') as f:
+        with open('./schemabench/data/custom_append.jsonl', 'r', encoding='utf-8') as f:
             for line in f:
                 obj = json.loads(line)
                 self.dataset.append({

@@ -23,7 +23,7 @@ Welcome to the official repo for SchemaBench, containing the dataset, training s
 
 ## What's New
 
-- **[2025/02/25]** SchemaBench is now released!
+- **[2025/02/26]** SchemaBench is now released!
 
 ## Data
 
@@ -166,6 +166,17 @@ We evaluate the performance of several models on the SchemaBench. The results ar
       <td>75.68</td>
     </tr>
     <tr>
+      <td>LLaMA-3.1 8B SRL</td>
+      <td>90.48</td>
+      <td>78.67</td>
+      <td>69.86</td>
+      <td>79.67</td>
+      <td>90.90</td>
+      <td>88.00</td>
+      <td>70.74</td>
+      <td>84.81</td>
+    </tr>
+    <tr>
       <td>LLaMA-3.2 3B</td>
       <td>49.84</td>
       <td>27.31</td>
@@ -211,8 +222,6 @@ We evaluate the performance of several models on the SchemaBench. The results ar
     </tr>
   </tbody>
 </table>
-
-
 
 ## Training
 

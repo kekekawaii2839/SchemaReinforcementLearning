@@ -1,5 +1,5 @@
 <div align="center">
-    <h1> SchemaBench </h1>
+    <h1> Schema Reinforcement Learning </h1>
 </div>
 
 <div align="center">
@@ -19,7 +19,7 @@
 
 </div>
 
-Welcome to the official repo for SchemaBench, containing the dataset, training scripts and evaluation code in our papar.
+Welcome to the official repo for Schema Reinforcement Learning, containing the dataset, training scripts and evaluation code in our papar.
 
 ## What's New
 
@@ -236,8 +236,8 @@ We evaluate the performance of several models on the SchemaBench. The results ar
 ### Install
 Clone this repository and navigate to the SchemaBench folder.
 ```bash
-git clone git@github.com:kekekawaii2839/SchemaBench.git
-cd SchemaBench
+git clone git@github.com:thunlp/SchemaReinforcementLearning.git
+cd SchemaReinforcementLearning
 ```
 Initialize the environment (python==3.11)
 ```bash

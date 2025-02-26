@@ -1,0 +1,35 @@
+[
+    {
+        "question": "A force of 5 N is required to increase the speed of a box from a rate of 1.0 m/s to 3.0 m/s within 5 s along a level surface. What change would most likely require additional force to produce the same results?",
+        "thought": "To determine what would require additional force, we must consider how mass affects force. Increasing the mass of the box would require more force to achieve the same acceleration.",
+        "answer": "B",
+        "choices": {
+            "A": "reduce the mass of the box",
+            "B": "increase the mass of the box",
+            "C": "make the surfaces of the box smooth",
+            "D": "make the surface of the floor smooth"
+        }
+    },
+    {
+        "question": "A hiker wants to know if air is warmer in a forest than in the nearby farm field. Which activity would best help the hiker find out which area is warmer?",
+        "thought": "To determine which area is warmer, the hiker needs to measure and compare the temperature at both locations. This gives direct evidence of which area has higher temperatures.",
+        "answer": "D",
+        "choices": {
+            "A": "reading a book about farm fields",
+            "B": "making a weather prediction for the forests",
+            "C": "measuring the wind speed at both locations",
+            "D": "recording the temperatures at both locations"
+        }
+    },
+    {
+        "question": "Visible light in the electromagnetic spectrum",
+        "thought": "Visible light is actually a small part of the much larger electromagnetic spectrum, which includes radio waves, microwaves, infrared, ultraviolet, X-rays, and gamma rays. Therefore, it is a narrow band within the spectrum.",
+        "answer": "B",
+        "choices": {
+            "A": "is a broad band within the spectrum.",
+            "B": "is a narrow band within the spectrum.",
+            "C": "makes up 50 percent of the spectrum.",
+            "D": "makes up more than 75 percent of the spectrum."
+        }
+    }
+]

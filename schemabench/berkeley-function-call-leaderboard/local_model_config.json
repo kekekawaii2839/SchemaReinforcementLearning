@@ -1,0 +1,7 @@
+[
+    {
+        "model_path": "/your/path/to/schemabench/train/results/llama3.2-3b-srl",
+        "model_handler": "LlamaHandler",
+        "model_name_in_csv": "llama3.2-3b-srl"
+    }
+]

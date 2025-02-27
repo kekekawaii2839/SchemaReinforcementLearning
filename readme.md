@@ -12,7 +12,7 @@
   <a href="#performance">Performance</a> •
   <a href="#training">Training</a> •
   <a href="#evaluation">Evaluation</a> •
-  <a href="#paper">Paper</a> •
+  <a href="https://arxiv.org/abs/2502.18878">Paper</a> •
   <a href="#citation">Citation</a>
 
 </p>
@@ -23,6 +23,7 @@ Welcome to the official repo for Schema Reinforcement Learning, containing the d
 
 ## What's New
 
+- **[2025/02/27]** Our papar is now released on arXiv!
 - **[2025/02/26]** SchemaBench is now released!
 
 ## Data
@@ -277,8 +278,16 @@ bash scripts/test_schemabench.sh
 
 If you need to run the evaluation on a subset of the SchemaBench, you can modify the `test_category` in `test_schemabench.sh` script. Currently you can choose from `['all', 'schema', 'reasoning']` and all single sub-tasks.
 
-## Paper
-The paper is currently under review. We will update the paper link once it is published.
-
 ## Citation
-To be updated in the future.
+If you find our work helpful, please consider citing our paper:
+```bibtex
+@misc{lu2025learninggeneratestructuredoutput,
+      title={Learning to Generate Structured Output with Schema Reinforcement Learning}, 
+      author={Yaxi Lu and Haolun Li and Xin Cong and Zhong Zhang and Yesai Wu and Yankai Lin and Zhiyuan Liu and Fangming Liu and Maosong Sun},
+      year={2025},
+      eprint={2502.18878},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.18878}, 
+}
+```

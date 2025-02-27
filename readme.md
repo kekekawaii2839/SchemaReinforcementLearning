@@ -19,11 +19,11 @@
 
 </div>
 
-Welcome to the official repo for Schema Reinforcement Learning, containing the dataset, training scripts and evaluation code in our papar.
+Welcome to the official repo for Schema Reinforcement Learning, containing the dataset, training scripts, and evaluation code in our paper.
 
 ## What's New
 
-- **[2025/02/27]** Our papar is now released on arXiv!
+- **[2025/02/27]** Our paper is now released on arXiv! Check it [here](https://arxiv.org/abs/2502.18878)!
 - **[2025/02/26]** SchemaBench is now released!
 
 ## Data

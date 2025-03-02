@@ -269,7 +269,7 @@ You can find your trained models in the `train/results` directory by default.
 Before evaluating performance on the SchemaBench, you should initialize the config file for local models' inference.
 We use [CodeLinker](https://github.com/luyaxi/CodeLinker) for inference, which currently support any OpenAI compatible server for the evaluation. To initialize the config file, first:
 ```bash
-mv private_example.toml private.toml
+cp private_example.toml private.toml
 ```
 Then fill in the `private.toml` with your api key and base url if needed. After that, you can run the following evaluation script:
 ```bash
